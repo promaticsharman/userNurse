@@ -1,0 +1,21 @@
+.user_meta_db{
+    position: relative;
+}
+.user_meta_db .img_upload{
+    position: absolute;
+    left: 87px;
+    top: 60px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.user_meta_db input{
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    width: 14px;
+    height: 13px;
+    left: 0px;
+    opacity: 0;
+    cursor:pointer;
+}

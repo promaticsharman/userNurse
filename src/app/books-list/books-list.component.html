@@ -1,0 +1,381 @@
+<app-header></app-header>
+
+<div class="wrapper_shala">
+	<section class="books_listing">
+		<div class="custom_container">
+			<div class="row">
+				<div class="col-sm-3">
+					<aside class="filter_listing">
+						<h3 class="top_head">Refine Search By:</h3>
+						<div class="sepratr_fltr">
+							<h4 class="sepr_head">Categories</h4>
+							<ul type="none" class="ul_fltr" *ngFor="let cat of bookCategoryList; let i = index;">
+								<li><mat-checkbox class="example-margin" (change)="categoryCheck(cat, $event)">{{ cat.category }}</mat-checkbox></li>
+								<!-- <li><mat-checkbox class="example-margin">Category2</mat-checkbox></li>
+								<li><mat-checkbox class="example-margin">Category3</mat-checkbox></li> -->
+							</ul>
+						</div>
+					</aside>
+				</div>
+				<div class="col-sm-9">
+					<div class="books_list_inner">
+						<div class="row">
+							<!-- <div class="col-sm-4">
+								<div class="product-wraper">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="https://m.media-amazon.com/images/I/51vXHfMKkdL._SX260_.jpg" alt="" class="img-fluid">
+											<span class="product-new-top">New</span>
+										</div>
+										<div class="item-info-product ">
+											<h4>
+												<a routerLink="/productDetail">Exam Name Title</a>
+											</h4>
+											<div class="ratdd-rev">
+												<span class="str_rev">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</span>
+												<span class="rev_nmb">(19)</span>
+											</div>
+											<div class="info-product-price d-flex justify-content-between">
+												<span class="item_price">$98.00</span>
+												<del>$120.00</del>
+											</div>
+											<div class="buy_amazon text-center">
+												<a routerLink="/" class="btn btn_amazon"><i class="fa fa-external-link-alt"></i> Buy From Amazon</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+							<div class="col-sm-3" *ngFor="let item of data; let i = index">
+								<div class="product-wraper">
+									<div class="text-center" [innerHTML]="transform(item.book_link)"></div>
+									<!-- <div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="https://images-na.ssl-images-amazon.com/images/I/51fTmUs-WEL._SX389_BO1,204,203,200_.jpg" alt="" class="img-fluid">
+											<span class="product-new-top">New</span>
+										</div>
+										<div class="item-info-product ">
+											<h4>
+												<a routerLink="/productDetail">Exam Name Title</a>
+											</h4>
+											<div class="ratdd-rev">
+												<span class="str_rev">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</span>
+												<span class="rev_nmb">(19)</span>
+											</div>
+											<div class="info-product-price d-flex justify-content-between">
+												<span class="item_price">$98.00</span>
+												<del>$120.00</del>
+											</div>
+											<div class="buy_amazon text-center">
+												<a routerLink="/" class="btn btn_amazon"><i class="fa fa-external-link-alt"></i> Buy From Amazon</a>
+											</div>
+										</div>
+									</div> -->
+								</div>
+							</div>
+							<!-- <div class="col-sm-4">
+								<div class="product-wraper">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="https://images-na.ssl-images-amazon.com/images/I/91y2n+pWbRL.jpg" alt="" class="img-fluid">
+											<span class="product-new-top">New</span>
+										</div>
+										<div class="item-info-product ">
+											<h4>
+												<a routerLink="/productDetail">Exam Name Title</a>
+											</h4>
+											<div class="ratdd-rev">
+												<span class="str_rev">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</span>
+												<span class="rev_nmb">(19)</span>
+											</div>
+											<div class="info-product-price d-flex justify-content-between">
+												<span class="item_price">$98.00</span>
+												<del>$120.00</del>
+											</div>
+											<div class="buy_amazon text-center">
+												<a routerLink="/" class="btn btn_amazon"><i class="fa fa-external-link-alt"></i> Buy From Amazon</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+							<!-- <div class="col-sm-4">
+								<div class="product-wraper">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="https://prodimage.images-bn.com/pimages/9780323289313_p0_v1_s550x406.jpg" alt="" class="img-fluid">
+											<span class="product-new-top">New</span>
+										</div>
+										<div class="item-info-product ">
+											<h4>
+												<a routerLink="/productDetail">Exam Name Title</a>
+											</h4>
+											<div class="ratdd-rev">
+												<span class="str_rev">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</span>
+												<span class="rev_nmb">(19)</span>
+											</div>
+											<div class="info-product-price d-flex justify-content-between">
+												<span class="item_price">$98.00</span>
+												<del>$120.00</del>
+											</div>
+											<div class="buy_amazon text-center">
+												<a routerLink="/" class="btn btn_amazon"><i class="fa fa-external-link-alt"></i> Buy From Amazon</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+							<!-- <div class="col-sm-4">
+								<div class="product-wraper">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="https://images-na.ssl-images-amazon.com/images/I/51fTmUs-WEL._SX389_BO1,204,203,200_.jpg" alt="" class="img-fluid">
+											<span class="product-new-top">New</span>
+										</div>
+										<div class="item-info-product ">
+											<h4>
+												<a routerLink="/productDetail">Exam Name Title</a>
+											</h4>
+											<div class="ratdd-rev">
+												<span class="str_rev">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</span>
+												<span class="rev_nmb">(19)</span>
+											</div>
+											<div class="info-product-price d-flex justify-content-between">
+												<span class="item_price">$98.00</span>
+												<del>$120.00</del>
+											</div>
+											<div class="buy_amazon text-center">
+												<a routerLink="/" class="btn btn_amazon"><i class="fa fa-external-link-alt"></i> Buy From Amazon</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+							<!-- <div class="col-sm-4">
+								<div class="product-wraper">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="https://m.media-amazon.com/images/I/51vXHfMKkdL._SX260_.jpg" alt="" class="img-fluid">
+										</div>
+										<div class="item-info-product ">
+											<h4>
+												<a routerLink="/productDetail">Exam Name Title</a>
+											</h4>
+											<div class="ratdd-rev">
+												<span class="str_rev">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</span>
+												<span class="rev_nmb">(19)</span>
+											</div>
+											<div class="info-product-price d-flex justify-content-between">
+												<span class="item_price">$98.00</span>
+												<del>$120.00</del>
+											</div>
+											<div class="buy_amazon text-center">
+												<a routerLink="/" class="btn btn_amazon"><i class="fa fa-external-link-alt"></i> Buy From Amazon</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+							<!-- <div class="col-sm-4">
+								<div class="product-wraper">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="https://images-na.ssl-images-amazon.com/images/I/51fTmUs-WEL._SX389_BO1,204,203,200_.jpg" alt="" class="img-fluid">
+										</div>
+										<div class="item-info-product ">
+											<h4>
+												<a routerLink="/productDetail">Exam Name Title</a>
+											</h4>
+											<div class="ratdd-rev">
+												<span class="str_rev">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</span>
+												<span class="rev_nmb">(19)</span>
+											</div>
+											<div class="info-product-price d-flex justify-content-between">
+												<span class="item_price">$98.00</span>
+												<del>$120.00</del>
+											</div>
+											<div class="buy_amazon text-center">
+												<a routerLink="/" class="btn btn_amazon"><i class="fa fa-external-link-alt"></i> Buy From Amazon</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+							<!-- <div class="col-sm-4">
+								<div class="product-wraper">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="https://images-na.ssl-images-amazon.com/images/I/91y2n+pWbRL.jpg" alt="" class="img-fluid">
+										</div>
+										<div class="item-info-product ">
+											<h4>
+												<a routerLink="/productDetail">Exam Name Title</a>
+											</h4>
+											<div class="ratdd-rev">
+												<span class="str_rev">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</span>
+												<span class="rev_nmb">(19)</span>
+											</div>
+											<div class="info-product-price d-flex justify-content-between">
+												<span class="item_price">$98.00</span>
+												<del>$120.00</del>
+											</div>
+											<div class="buy_amazon text-center">
+												<a routerLink="/" class="btn btn_amazon"><i class="fa fa-external-link-alt"></i> Buy From Amazon</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+							<!-- <div class="col-sm-4">
+								<div class="product-wraper">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="https://prodimage.images-bn.com/pimages/9780323289313_p0_v1_s550x406.jpg" alt="" class="img-fluid">
+											<span class="product-new-top">New</span>
+										</div>
+										<div class="item-info-product ">
+											<h4>
+												<a routerLink="/productDetail">Exam Name Title</a>
+											</h4>
+											<div class="ratdd-rev">
+												<span class="str_rev">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</span>
+												<span class="rev_nmb">(19)</span>
+											</div>
+											<div class="info-product-price d-flex justify-content-between">
+												<span class="item_price">$98.00</span>
+												<del>$120.00</del>
+											</div>
+											<div class="buy_amazon text-center">
+												<a routerLink="/" class="btn btn_amazon"><i class="fa fa-external-link-alt"></i> Buy From Amazon</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+							<!-- <div class="col-sm-4">
+								<div class="product-wraper">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="https://m.media-amazon.com/images/I/51vXHfMKkdL._SX260_.jpg" alt="" class="img-fluid">
+										</div>
+										<div class="item-info-product ">
+											<h4>
+												<a routerLink="/productDetail">Exam Name Title</a>
+											</h4>
+											<div class="ratdd-rev">
+												<span class="str_rev">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</span>
+												<span class="rev_nmb">(19)</span>
+											</div>
+											<div class="info-product-price d-flex justify-content-between">
+												<span class="item_price">$98.00</span>
+												<del>$120.00</del>
+											</div>
+											<div class="buy_amazon text-center">
+												<a routerLink="/" class="btn btn_amazon"><i class="fa fa-external-link-alt"></i> Buy From Amazon</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+							<!-- <div class="col-sm-4">
+								<div class="product-wraper">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="https://images-na.ssl-images-amazon.com/images/I/91y2n+pWbRL.jpg" alt="" class="img-fluid">
+											<span class="product-new-top">New</span>
+										</div>
+										<div class="item-info-product ">
+											<h4>
+												<a routerLink="/productDetail">Exam Name Title</a>
+											</h4>
+											<div class="ratdd-rev">
+												<span class="str_rev">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</span>
+												<span class="rev_nmb">(19)</span>
+											</div>
+											<div class="info-product-price d-flex justify-content-between">
+												<span class="item_price">$98.00</span>
+												<del>$120.00</del>
+											</div>
+											<div class="buy_amazon text-center">
+												<a routerLink="/" class="btn btn_amazon"><i class="fa fa-external-link-alt"></i> Buy From Amazon</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- footer starts -->
+	<app-footer></app-footer>
+	<!-- footer ends -->
+</div>

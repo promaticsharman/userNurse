@@ -1,0 +1,93 @@
+<div class="top-header">
+    <div class="custom_container">
+        <div class="row">
+            <div class="social-icon text-left col-sm-6">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>                    
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="top-logins text-right col-sm-6">
+                <ul class="list-inline" *ngIf="!isLogged">
+                    <li class="active list-inline-item">
+                        <a class="btn btn-outline-primary my-sm-0" type="button" routerLink="/signup">Signup</a>
+                    </li>
+                    <li class=" list-inline-item">
+                        <a class="btn btn-outline-primary my-sm-0" type="button" routerLink="/login">Login</a>
+                    </li>
+                </ul>
+
+                <ul class="list-inline" *ngIf="isLogged">
+                    <li class="active list-inline-item">
+                        <a class="btn btn-outline-primary my-sm-0" type="button" routerLink="/dbDashboard">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<header class="header_home">
+    <div class="custom_container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">
+            <img src="assets/imgs/logo.png" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto navigation-bar">
+                    <li class="nav-item active ">
+                        <a class="nav-link" routerLink="/">Home</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" routerLink="/exams">Practice Exams</a>
+                        </li> -->
+                    <li class="nav-item dropdown header-dropdown">
+                        <a routerLink="#" class="nav-link">Practice Exams
+                        <span>
+                        <i class="fa fa-chevron-down fa-fw"></i>
+                        </span>
+                        </a>
+                        <ul class="dropdown-items cst-class" type="none" >
+                            <li *ngFor="let name of examName">
+                                <a (click)="navigate(name._id)" >{{name.examName}}</a>
+                            </li>
+                            <!-- <li> -->
+                                <!-- <a routerLink="/exams">PTCB</a> -->
+                                <!-- <a href="https://www.rphbuddy.com/Display-Package/NDk=">PTCB</a> -->
+                            <!-- </li> -->
+                            <!-- <li> -->
+                                <!-- <a routerLink="/exams">CPJE</a> -->
+                                <!-- <a href="https://www.rphbuddy.com/Display-Package/NTA=">CPJE</a> -->
+                            <!-- </li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/booksListing">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Free Questions</a>
+                    </li>
+                </ul>
+                <form class="form-inline form__--dasdf justify-content-end my-2 my-lg-0">
+                    <a class="link_srch"><i class="fa fa-search"></i></a>
+                    <a class="cart_btnn" routerLink="/myCart">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cartId" class="no-cart">{{ cartCount }}</span>
+                    </a>
+                </form>
+            </div>
+        </nav>
+    </div>
+</header>

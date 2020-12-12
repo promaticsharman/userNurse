@@ -1,0 +1,206 @@
+<app-header></app-header>
+
+<div class="wrapper_shala">
+	
+	<section class="sign_up_wrap comm_sec">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="regsiter_usr">
+                        <div class="row">
+                            <div class="col-sm-6 offset-sm-3">
+                            	<div class="cms_top_desc text-left">
+                                    <h2>Get On Board!</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </p>
+                                </div>
+                                <div class="rigth_side">
+                                	<div class="section-title pos_rel text-center mt-0">
+                            			<!-- <div class="intro-title">Get on Board!</div> -->
+                            			<h2>Sign Up</h2>
+                            		</div>
+                                    <form [formGroup]="signup">
+                                    	<div class="row">
+                                    		<div class="col-sm-6">
+		                                        <div class="form-group">
+		                                            <input formControlName="first_name" [(ngModel)]="form.first_name" type="text" name="" class="form-control" placeholder="First Name">
+														<div *ngIf="signup.controls.first_name.invalid && (signup.controls.first_name.dirty || signup.controls.first_name.touched)"
+														class="">
+													
+															<mat-error *ngIf="signup.controls.first_name.errors.required">
+																First Name is required
+															</mat-error>
+
+														</div>
+												</div>
+												
+													
+		                                    </div>
+		                                    <div class="col-sm-6">
+		                                        <div class="form-group">
+		                                            <input type="text" name="" [(ngModel)]="form.last_name" formControlName="last_name" class="form-control" placeholder="Last Name">
+													<div *ngIf="signup.controls.last_name.invalid && (signup.controls.last_name.dirty || signup.controls.last_name.touched)"
+														class="">
+													
+														<mat-error *ngIf="signup.controls.last_name.errors.required">
+															Last Name is required
+														</mat-error>
+
+													</div>
+												</div>
+		                                    </div>
+		                                </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" (keyup)="onKeyEmail($event)" [(ngModel)]="form.email" class="form-control" formControlName="email" placeholder="Email">
+											<div *ngIf="signup.controls.email.invalid && (signup.controls.email.dirty || signup.controls.email.touched)"
+														class="">
+													
+												<mat-error *ngIf="signup.controls.email.errors.required">
+													Email is required
+												</mat-error>
+												<mat-error *ngIf="signup.controls.email.errors.email">
+													Email is not valid
+												</mat-error>
+
+											</div>
+											<p style="color: #e80358" *ngIf="!signup.controls.email.invalid && emailStatus">			
+												Email already exist.
+											</p>
+										</div>
+                                        <div class="row">
+                                    		<div class="col-sm-6">
+		                                        <div class="form-group">
+													<input type="password" [(ngModel)]="form.password" name="" class="form-control" formControlName="password" placeholder="Password">
+													<div *ngIf="signup.controls.password.invalid && (signup.controls.password.dirty || signup.controls.password.touched)"
+														class="">
+													
+														<mat-error *ngIf="signup.controls.password.errors.required">
+															Password is required
+														</mat-error>
+
+													</div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="col-sm-6">
+		                                        <div class="form-group">
+		                                            <input type="password" (keyup)="onKey($event)" name="" class="form-control" formControlName="confirm_password" placeholder="Confirm Password">
+													<div *ngIf="signup.controls.confirm_password.invalid && (signup.controls.confirm_password.dirty || signup.controls.confirm_password.touched)"
+														class="">
+													
+														<mat-error *ngIf="signup.controls.confirm_password.errors.required">
+															Confirm password is required
+														</mat-error>
+
+													</div>
+													<p style="color: #e80358" *ngIf="!signup.controls.confirm_password.invalid && p_false">			
+														Password and confirm password is not matched
+													</p>
+												</div>
+		                                    </div>
+		                                </div>
+		                                <div class="form-group">
+                                            <label></label>
+                                            <select class="form-control custom-select" [(ngModel)]="form.choose_exam" formControlName="choose_exam">
+                                            	<option value="" selected>Choose Exam</option>
+                                            	<option *ngFor="let item of exams" value="{{ item._id }}">{{ item.examName }}</option>
+											</select>
+											<div *ngIf="signup.controls.choose_exam.invalid && (signup.controls.choose_exam.dirty || signup.controls.choose_exam.touched)"
+												class="">
+											
+												<mat-error *ngIf="signup.controls.choose_exam.errors.required">
+													Please choose exam
+												</mat-error>
+
+											</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" [(ngModel)]="form.mobile_number" formControlName="mobile_number" class="form-control" placeholder="Mobile Number">
+											<div *ngIf="signup.controls.mobile_number.invalid && (signup.controls.mobile_number.dirty || signup.controls.mobile_number.touched)"
+												class="">
+											
+												<mat-error *ngIf="signup.controls.mobile_number.errors.required">
+													Mobile Number is required
+												</mat-error>
+
+											</div>
+										</div>
+                                        <div class="form-group">
+                                            <input type="text" name="" [(ngModel)]="form.address" formControlName="address" ngx-google-places-autocomplete #placesRef="ngx-places" class="form-control" placeholder="Enter Address">
+											<div *ngIf="signup.controls.address.invalid && (signup.controls.address.dirty || signup.controls.address.touched)"
+												class="">
+											
+												<mat-error *ngIf="signup.controls.address.errors.required">
+													Address is required
+												</mat-error>
+
+											</div>
+										</div>
+                                        <div class="row">
+                                    		<div class="col-sm-6">
+		                                        <div class="form-group">
+		                                            <!-- <input type="text" name="" class="form-control" [(ngModel)]="form.state" formControlName="state" placeholder="State"> -->
+													
+													<select class="form-control custom-select" [(ngModel)]="form.state" formControlName="state">
+														<option value="" selected=true>Choose State</option>
+														<option *ngFor="let item of states"  [value]="item._id">{{ item.state_name }}</option>
+													</select>
+													
+													
+													<div *ngIf="signup.controls.state.invalid && (signup.controls.state.dirty || signup.controls.state.touched)"
+														class="">
+													
+														<mat-error *ngIf="signup.controls.state.errors.required">
+															State is required
+														</mat-error>
+
+													</div>
+												</div>
+		                                    </div>
+		                                    <div class="col-sm-6">
+		                                        <div class="form-group">
+		                                            <input type="text" formControlName="zip_code" [(ngModel)]="form.zip_code" class="form-control" placeholder="Zip Code">
+													<div *ngIf="signup.controls.zip_code.invalid && (signup.controls.zip_code.dirty || signup.controls.zip_code.touched)"
+														class="">
+													
+														<mat-error *ngIf="signup.controls.zip_code.errors.required">
+															Zip code is required
+														</mat-error>
+
+													</div>
+												</div>
+		                                    </div>
+		                                </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck" formControlName="checkbox" [(ngModel)]="form.checkbox" >
+												<label class="custom-control-label" for="customCheck">By clicking Register I confirm that I am above 18 years old and agree to Terms of Use & Privacy Policy</label>
+												
+		
+                                            </div>
+                                        </div>
+                                        <div class="sub_btn text-center my-4">
+											
+                                            <button class="btn btn_theme" [disabled]="!signup.valid" (click)="register()" type="button"><i class="fa fa-spinner fa-spin" *ngIf="loading"></i> Register</button>
+										</div>  
+									
+                                    </form>
+                                    <div class="sign_link text-center">
+                                        <p class="mt-2">Already have an account? <a href="javascript:;" class="sign_lik">Login here</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- footer starts -->
+	<app-footer></app-footer>
+	<!-- footer ends -->
+</div>

@@ -1,0 +1,218 @@
+<app-header></app-header>
+
+<div class="wrapper_shala">
+	<section class="her_sldr_don pos_rel">
+	    <img src="assets/imgs/exam_bnr.png" class="img-fluid img_exam_bnr" />
+	    <!-- <div class="container">
+		    <div class="pos_abs_exam_nam">
+		    	<h1>NC-LEX Exam 1</h1>
+		    </div>
+		</div> -->
+	</section>
+
+	<section class="subscrp_cards">
+		<div class="container">
+			<div class="row">
+                <div class="col-sm-12">
+                    <div class="course_tables">
+                        <div class="single_cors bg_sky wow fadeInRight" data-wow-delay=".2s">
+                        	<h3 class="bg_color_hed">Get Ready to Pass</h3>
+                            <!-- <div class="cors_head">
+                                <h2 class="cors_title">$300</h2>
+                                <p>Validity: 90 Days</p>
+                            </div> -->
+                            <div class="cors_body">
+                                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.</p>
+                                <p>Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat.</p> -->
+								<div class="text-center" [innerHTML]="transform(exam_details.description_1)"></div>
+								<!-- {{exam_details.description_1}} -->
+                            </div>
+                        </div>
+
+                        <div class="single_cors bg_org wow fadeIn" data-wow-delay=".3s">
+                        	<h3 class="bg_color_hed">{{ exam_details ? exam_details.examName : "" }}</h3>
+                            <div class="cors_head">
+                                <h2 class="cors_title">${{ exam_details ? exam_details.price : 0 }}</h2>
+                                <p>Validity: 6 Months</p>
+                            </div>
+                            <div class="cors_body">
+                                <ul class="cors_list" type="none">
+                                	<li><i class="fa fa-check"></i>Valid for {{ exam_details.validity }} days</li>
+                                    <li><i class="fa fa-check"></i>200+Practice Questions</li>
+                                    <li><i class="fa fa-check"></i>Content Matches NCLEX-RN</li>
+                                    <li><i class="fa fa-check"></i>Exam Style Questions</li>
+                                </ul>
+                            </div>
+                            <div class="cors_footer">
+                                <a href="javascript:;" class="btn btn_theme" data-animation="fadeInLeft" (click)="addToCarts(exam_details ? exam_details._id : 0)" data-delay="900ms">Add to Cart <i class="fa fa-long-arrow-alt-right"></i></a>
+                                <a class="link_a" href="javascript:;">Try Free Sample Questions</a>
+                            </div>
+                        </div>
+
+                        <div class="single_cors bg_purp wow fadeIn" data-wow-delay=".3s">
+                        	<h3 class="bg_color_hed">Be Prepared</h3>
+                            <!-- <div class="cors_head">
+                                <h2 class="cors_title">$2100</h2>
+                                <p>Validity: 1 Year</p>
+                            </div> -->
+                            <div class="cors_body">
+                                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.</p>
+                                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+								
+								<div class="text-center" [innerHTML]="transform(exam_details.description_2)"></div>
+                            </div>
+                            <!-- <div class="cors_footer">
+                                <a href="javascript:;" class="btn btn_theme" data-animation="fadeInLeft" data-delay="900ms">Add to Cart <i class="fa fa-long-arrow-alt-right"></i></a>
+                                <a class="link_a" href="javascript:;">Try Free Sample Questions</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</section>
+
+	<section class="aabott_sec bg_gray">
+	    <div class="container">
+	        <div class="row align-items-center">
+	            <div class="col-sm-6 pl-0">
+	                <div class="left_abt_mig">
+	                    <div class="video-bx">
+							<img src="https://www.henryharvin.com/blog/wp-content/uploads/2020/07/online-teacher.jpg" class="img-fluid" alt="Signature">
+						</div>
+	                </div>
+	            </div>
+	            <div class="col-sm-6">
+	                <div class="wrap_abt_right">
+	                    <div class="section-title pos_rel text-left">
+	                        <!-- <div class="intro-title">Key Features</div> -->
+	                        <h2 [innerHTML]="transform(exam_details.heading)"></h2>                      
+	                    </div>
+	                    <div class="para_doc_abt">
+	                    	<p [innerHTML]="transform(exam_details.description_3)"></p>
+	                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+	                    </div>
+	                    <div class="mt-4">
+	                    	<button class="btn btn_theme">Meet Our Doctors <i class="fa fa-long-arrow-alt-right"></i></button>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+	<section class="qult_sec">
+		<div class="container">
+			<div class="col-sm-8 offset-sm-2">
+				<div class="section-title pos_rel text-center">
+                    <h2>About the {{ exam_details ? exam_details.examName : "" }} Exam</h2>
+                    <!-- <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</h4> -->
+					<h4 [innerHTML]="transform(exam_details.about)"></h4>
+                </div>
+			</div>
+			<div class="col-sm-10 offset-sm-1">
+				<div class="section-title pos_rel text-center">
+                    <h2>Frequently Asked Questions</h2>
+                    <h4>What can we help you with today?</h4>
+					<p>If you can't find the answer to your question, please contact us. We are happy to help you.</p>
+                </div>
+                <div class="faq_accord">
+                	<div id="accordion">
+				  		<div class="card" *ngFor="let faq of faq_details;let i = index;">
+					    	<div class="card-header" id="headingOne">
+						      <h5 class="mb-0" data-toggle="collapse" [attr.data-target]="'#collapse' + i" aria-expanded="true" aria-controls="collapseOne">
+						          <span class="pls_ico"><i class="fa fa-plus"></i></span> <span class="mns_ico"><i class="fa fa-minus"></i></span> {{ faq.question }}
+						      </h5>
+							</div>
+						    <div [attr.id]="'collapse' + i" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+						      <!-- <div class="card-body">
+						        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+							  </div> -->
+							  <div class="card-body">
+								  {{ faq.answer }}
+							  </div>
+						    </div>
+					  	</div>
+					  	<!-- <div class="card">
+						    <div class="card-header" id="headingTwo">
+						      <h5 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						         <span class="pls_ico"><i class="fa fa-plus"></i></span> <span class="mns_ico"><i class="fa fa-minus"></i></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						      </h5>
+						    </div>
+						    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+						      <div class="card-body">
+						        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						      </div>
+						    </div>
+					  	</div> -->
+					  	<!-- <div class="card">
+					    	<div class="card-header" id="heading3">
+						      <h5 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+						          <span class="pls_ico"><i class="fa fa-plus"></i></span> <span class="mns_ico"><i class="fa fa-minus"></i></span> Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+						      </h5>
+						    </div>
+						    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion">
+						      <div class="card-body">
+						        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						      </div>
+						    </div>
+					  	</div> -->
+					  	<!-- <div class="card">
+						    <div class="card-header" id="headingTwo">
+						      <h5 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+						          <span class="pls_ico"><i class="fa fa-plus"></i></span> <span class="mns_ico"><i class="fa fa-minus"></i></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						      </h5>
+						    </div>
+						    <div id="collapse4" class="collapse" data-parent="#accordion">
+						      <div class="card-body">
+						        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid.
+						      </div>
+						    </div>
+					  	</div> -->
+					  	<!-- <div class="card">
+					    	<div class="card-header" id="heading5">
+						      <h5 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+						          <span class="pls_ico"><i class="fa fa-plus"></i></span> <span class="mns_ico"><i class="fa fa-minus"></i></span> Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+						      </h5>
+						    </div>
+						    <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion">
+						      <div class="card-body">
+						        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						      </div>
+						    </div>
+					  	</div> -->
+					  	<!-- <div class="card">
+						    <div class="card-header" id="headingTwo">
+						      <h5 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+						          <span class="pls_ico"><i class="fa fa-plus"></i></span> <span class="mns_ico"><i class="fa fa-minus"></i></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						      </h5>
+						    </div>
+						    <div id="collapse6" class="collapse" data-parent="#accordion">
+						      <div class="card-body">
+						        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid.
+						      </div>
+						    </div>
+					  	</div> -->
+					</div>
+                </div>
+			</div>
+		</div>
+	</section>
+	<!-- footer starts -->
+	<app-footer></app-footer>
+	<!-- footer ends -->
+</div>

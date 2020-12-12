@@ -1,0 +1,187 @@
+<!-- <app-header></app-header> -->
+<app-lms-header></app-lms-header>
+<div class="wrapper_shala lms_exam_taken_sec">
+	
+	<section class="main_lms_wrapper exam_chptrs_pages lms_lesson_details">
+		
+			<div class="d-flex prnt_intro ">
+				<aside class="lms_sideba position-relative mt-4">
+					<span class="menu_bar_btn">
+						<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+
+					</span>				
+					<div class="lms_sidebar">
+						<div class="cors_prog">
+							<h3>{{examName}}</h3>
+							<ul class="cors_menu_li">
+								<li class="lsn_div" *ngFor="let chapter of chapter;">
+									
+									<a class="leson_name" (click)="getTopics(chapter._id,chapter.chapter)"><i class="fa fa-check-circle"></i>{{chapter.chapter}}</a>
+									<!-- <div class="lsn_cntntn"><span class="cp">3 Topics</span> <b>|</b> <span>1 Quiz</span></div>
+									<ul class="tpcs_quiz">
+										<li><a class="cp"><i class="far fa-dot-circle"></i> Introduction</a></li>
+										<li><a class="cp"><i class="far fa-circle"></i> Basics of NCLEX-RN</a></li>
+										<li><a class="cp"><i class="far fa-circle"></i> Chapter Quiz</a></li>
+									</ul> -->
+								</li>
+								<!-- <li class="lsn_div">
+									<a class="leson_name"><i class="far fa-circle"></i> Second Lesson of Basic</a>
+								</li>
+								<li class="lsn_div">
+									<a class="leson_name"><i class="far fa-circle"></i> Third Lesson</a>
+								</li> -->
+								<!-- <li class="lsn_div"> -->
+									<!-- <a class="leson_name"><i class="far fa-circle"></i> Fundamentals of Chapter</a> -->
+									<!-- <div class="lsn_cntntn"><span class="cp">3 Topics</span></div>
+									<ul class="tpcs_quiz">
+										<li><a class="cp"><i class="far fa-circle"></i> Introduction</a></li>
+										<li><a class="cp"><i class="far fa-circle"></i> Basics of NCLEX-RN</a></li>
+										<li><a class="cp"><i class="far fa-circle"></i> Summary of Chapters</a></li>
+									</ul> -->
+								<!-- </li> -->
+								<!-- <li class="lsn_div">
+									<a class="leson_name"><i class="far fa-circle"></i> Final Quiz</a>
+								</li> -->
+							</ul>
+						</div>
+					</div>
+				</aside>
+				<div class="br_rgt">
+					<div class="cors_lms_sec">
+						<div class="corse_chaptr_default ml-5 border px-3">
+							<div class="row mt-2 border-bottom">
+								<div class="col-sm-6 cors_ttl_lms">{{chName}}</div>
+								<div class="col-sm-6 text-right mb-3">
+									<button class="btn btn-primary" routerLink="/lmsIntroduction/{{exam_id}}/{{type}}/{{exmName}}">Launch</button>
+								</div>
+							</div>
+							<div class="row border-bottom mt-3">
+									<div class="col-sm-4">
+										<h3>Lesson Structure</h3>
+									</div>
+									<div class="col-sm-4">
+										<h3>Status</h3>
+									</div>
+									<div class="col-sm-4">
+										<h3>Score</h3>
+									</div>
+							</div>
+							<div class="row border-bottom cstm_fnt mt-3">
+								<div class="col-sm-12">
+									<p>{{chName}}</p>
+								</div>
+							</div>
+							<div class="row border-bottom bg-light cstm_fnt mt-3" *ngFor="let topic of topicName; let i = index;">
+								<!-- {{topicName | json}} -->
+								<div class="col-sm-4 ">
+									<a class="ml-2" routerLink="/lmsIntroduction/{{exam_id}}/{{chapterID}}/{{topic._id}}/{{type}}">{{topic.topicName}}</a>
+								</div>
+								<div class="col-sm-4">
+									<p>Completed</p>
+								</div>
+								<div class="col-sm-4">
+									<p>86/100</p>
+								</div>
+							</div>
+
+							<!-- <div class="row border-bottom bg-light cstm_fnt mt-3">
+								<div class="col-sm-4 ">
+									<p class="ml-2">Topic 2</p>
+								</div>
+								<div class="col-sm-4">
+									<p>Pending</p>
+								</div>
+								<div class="col-sm-4">
+									<p>-</p>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+		
+	</section>
+
+	<!-- footer starts -->
+	<!-- <app-footer></app-footer> -->
+	<app-lms-footer></app-lms-footer>
+	<!-- footer ends -->
+</div>
+
+<div class="loader_page d-flex align-items-center" *ngIf="loaderShow">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(241, 242, 243); display: block; background: transparent;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+        <g transform="rotate(0 50 50)">
+          <rect x="46.5" y="28" rx="3.5" ry="2" width="7" height="4" fill="#0a69aa">
+            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="0.7575757575757576s" begin="-0.6818181818181818s" repeatCount="indefinite"></animate>
+          </rect>
+        </g><g transform="rotate(36 50 50)">
+          <rect x="46.5" y="28" rx="3.5" ry="2" width="7" height="4" fill="#0a69aa">
+            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="0.7575757575757576s" begin="-0.606060606060606s" repeatCount="indefinite"></animate>
+          </rect>
+        </g><g transform="rotate(72 50 50)">
+          <rect x="46.5" y="28" rx="3.5" ry="2" width="7" height="4" fill="#0a69aa">
+            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="0.7575757575757576s" begin="-0.5303030303030303s" repeatCount="indefinite"></animate>
+          </rect>
+        </g><g transform="rotate(108 50 50)">
+          <rect x="46.5" y="28" rx="3.5" ry="2" width="7" height="4" fill="#0a69aa">
+            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="0.7575757575757576s" begin="-0.45454545454545453s" repeatCount="indefinite"></animate>
+          </rect>
+        </g><g transform="rotate(144 50 50)">
+          <rect x="46.5" y="28" rx="3.5" ry="2" width="7" height="4" fill="#0a69aa">
+            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="0.7575757575757576s" begin="-0.3787878787878788s" repeatCount="indefinite"></animate>
+          </rect>
+        </g><g transform="rotate(180 50 50)">
+          <rect x="46.5" y="28" rx="3.5" ry="2" width="7" height="4" fill="#0a69aa">
+            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="0.7575757575757576s" begin="-0.303030303030303s" repeatCount="indefinite"></animate>
+          </rect>
+        </g><g transform="rotate(216 50 50)">
+          <rect x="46.5" y="28" rx="3.5" ry="2" width="7" height="4" fill="#0a69aa">
+            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="0.7575757575757576s" begin="-0.22727272727272727s" repeatCount="indefinite"></animate>
+          </rect>
+        </g><g transform="rotate(252 50 50)">
+          <rect x="46.5" y="28" rx="3.5" ry="2" width="7" height="4" fill="#0a69aa">
+            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="0.7575757575757576s" begin="-0.1515151515151515s" repeatCount="indefinite"></animate>
+          </rect>
+        </g><g transform="rotate(288 50 50)">
+          <rect x="46.5" y="28" rx="3.5" ry="2" width="7" height="4" fill="#0a69aa">
+            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="0.7575757575757576s" begin="-0.07575757575757575s" repeatCount="indefinite"></animate>
+          </rect>
+        </g><g transform="rotate(324 50 50)">
+          <rect x="46.5" y="28" rx="3.5" ry="2" width="7" height="4" fill="#0a69aa">
+            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="0.7575757575757576s" begin="0s" repeatCount="indefinite"></animate>
+          </rect>
+        </g>
+    </svg>
+</div>
+
+
+
+<!-- <div class="accordion_chptrss">
+	<div id="accordion">
+		<div class="card">
+			  <div class="card-header" id="headingOne">
+				<div class="cstm_fnt mt-3 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					<p>{{chName}}</p>
+				</div>											
+			  </div>								  
+			  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+				<div class="card-body">
+					<div class="row_accord">
+						<div class="row border-bottom bg-light cstm_fnt mt-3" *ngFor="let topic of topicName; let i = index;">
+							<div class="col-sm-8">
+								<a class="ml-2" routerLink="/lmsIntroduction/{{chapterID}}/{{topic._id}}/{{i}}">{{topic.topicName}}</a>
+							</div>
+							<div class="col-sm-2">
+								<p>Completed</p>
+							</div>
+							<div class="col-sm-2">
+								<p>86/100</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			  </div>
+		</div>
+	</div>
+</div> -->

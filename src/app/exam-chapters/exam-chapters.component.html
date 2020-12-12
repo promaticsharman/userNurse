@@ -1,0 +1,186 @@
+<app-header></app-header>
+
+<div class="wrapper_shala lms_exam_taken_sec">
+	
+	<section class="main_lms_wrapper exam_chptrs_pages">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9 br_rgt">
+					<div class="cors_lms_sec">
+						<div class="corse_chaptr_default" *ngIf="first == true">
+							<h2 class="cors_ttl_lms">First Lesson of Basic</h2>
+							<div class="bredaceumb_leson">
+								<nav aria-label="breadcrumb">
+								  	<ol class="breadcrumb">
+								    	<li class="breadcrumb-item"><a href="#">First Lesson of Basic</a></li>
+								    	<li class="breadcrumb-item active">Introduction</li>
+								  	</ol>
+								</nav>
+							</div>
+							<div class="cours_img cors_vids">
+								<iframe width="100%" height="100%" src="https://www.youtube.com/embed/O5w4TxZBSk0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+							<div class="chaptr_knowldge">
+								<h2>Introduction</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<ul>
+									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</li>
+									<li>Consequat. Duis aute irure dolor in reprehenderit in voluptate</li>
+									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</li>
+									<li>Onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</li>
+									<li>Sed do eiusmod tempor incididunt ut labore et</li>
+								</ul>
+							</div>
+							<div class="pager_button d-flex justify-content-between align-items-center">
+								<a href="" class="cp"><< Go back</a>
+								<a class="btn btn_theme" (click)="changeDiv('first')">Mark Complete & Next</a>
+							</div>
+						</div>
+						<div class="corse_chaptr_default second_chaptr" *ngIf="second == true">
+							<h2 class="cors_ttl_lms">First Lesson of Basic - Topic 2</h2>
+							<div class="bredaceumb_leson">
+								<nav aria-label="breadcrumb">
+								  	<ol class="breadcrumb">
+								    	<li class="breadcrumb-item"><a href="#">First Lesson of Basic</a></li>
+								    	<li class="breadcrumb-item active">Basics of NCLEX-RN</li>
+								  	</ol>
+								</nav>
+							</div>
+							<div class="chaptr_knowldge">
+								<h2>Lorem Ipsum dolor sit</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<div class="questions_dv">
+									<div class="quest_sngl">
+										<p>Ullamco laboris nisi ut aliquip ex ea commodo?</p>
+										<div class="mat_rads_ques">
+											<mat-radio-group aria-label="Select an option">
+												<mat-radio-button value="1">Option 1</mat-radio-button>
+												<mat-radio-button value="2">Option 2</mat-radio-button>
+											</mat-radio-group>
+										</div>
+									</div>
+									<div class="quest_sngl">
+										<p>Ullamco laboris nisi ut aliquip ex ea commodo?</p>
+										<div class="mat_rads_ques">
+											<mat-radio-group aria-label="Select an option">
+												<mat-radio-button value="1">Option 1</mat-radio-button>
+												<mat-radio-button value="2">Option 2</mat-radio-button>
+											</mat-radio-group>
+										</div>
+									</div>
+									<div class="quest_sngl">
+										<p>Ullamco laboris nisi ut aliquip ex ea commodo?</p>
+										<div class="mat_rads_ques">
+											<mat-radio-group aria-label="Select an option">
+												<mat-radio-button value="1">Option 1</mat-radio-button>
+												<mat-radio-button value="2">Option 2</mat-radio-button>
+											</mat-radio-group>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pager_button d-flex justify-content-between align-items-center">
+								<a href="" class="cp"><< Go back</a>
+								<a class="btn btn_theme" (click)="changeDiv('second')">Mark Complete & Next</a>
+							</div>
+						</div>
+						<div class="corse_chaptr_default third_chaptr" *ngIf="third == true">
+							<h2 class="cors_ttl_lms">First Lesson of Basic - Quiz</h2>
+							<div class="bredaceumb_leson">
+								<nav aria-label="breadcrumb">
+								  	<ol class="breadcrumb">
+								    	<li class="breadcrumb-item"><a href="#">First Lesson of Basic</a></li>
+								    	<li class="breadcrumb-item active">Chapter Quiz</li>
+								  	</ol>
+								</nav>
+							</div>
+							<div class="chaptr_knowldge">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<div class="questions_dv">
+									<div class="quest_sngl">
+										<p>Ullamco laboris nisi ut aliquip ex ea commodo?</p>
+										<div class="mat_rads_ques">
+											<mat-radio-group aria-label="Select an option">
+												<mat-radio-button value="1">Option 1</mat-radio-button>
+												<mat-radio-button value="2">Option 2</mat-radio-button>
+											</mat-radio-group>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pager_button d-flex justify-content-between align-items-center">
+								<a href="" class="cp"><< Go back</a>
+								<a class="btn btn_theme">Submit</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<aside class="lms_sidebar">
+						<div class="cors_prog">
+							<h3>Course Progress</h3>
+							<div class="progrs_br">
+								<mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+							</div>
+							<div class="compltn_type d-flex justify-content-between">
+								<span class="color_prog">10% Complete</span>
+								<span class="text-muted">Last activity: May 17, 2020</span>
+							</div>
+						</div>
+						<div class="cors_prog">
+							<h3>Course Navigation</h3>
+							<ul class="cors_menu_li">
+								<li class="lsn_div">
+									<a class="leson_name active_a"><i class="fa fa-check-circle"></i> First Lesson of Basic</a>
+									<div class="lsn_cntntn"><span class="cp">3 Topics</span> <b>|</b> <span>1 Quiz</span></div>
+									<ul class="tpcs_quiz">
+										<li><a class="cp"><i class="far fa-dot-circle"></i> Introduction</a></li>
+										<li><a class="cp"><i class="far fa-circle"></i> Basics of NCLEX-RN</a></li>
+										<li><a class="cp"><i class="far fa-circle"></i> Chapter Quiz</a></li>
+									</ul>
+								</li>
+								<li class="lsn_div">
+									<a class="leson_name"><i class="far fa-circle"></i> Second Lesson of Basic</a>
+								</li>
+								<li class="lsn_div">
+									<a class="leson_name"><i class="far fa-circle"></i> Third Lesson</a>
+								</li>
+								<li class="lsn_div">
+									<a class="leson_name"><i class="far fa-circle"></i> Fundamentals of Chapter</a>
+									<div class="lsn_cntntn"><span class="cp">3 Topics</span></div>
+									<ul class="tpcs_quiz">
+										<li><a class="cp"><i class="far fa-circle"></i> Introduction</a></li>
+										<li><a class="cp"><i class="far fa-circle"></i> Basics of NCLEX-RN</a></li>
+										<li><a class="cp"><i class="far fa-circle"></i> Summary of Chapters</a></li>
+									</ul>
+								</li>
+								<li class="lsn_div">
+									<a class="leson_name"><i class="far fa-circle"></i> Final Quiz</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- footer starts -->
+	<app-footer></app-footer>
+	<!-- footer ends -->
+</div>

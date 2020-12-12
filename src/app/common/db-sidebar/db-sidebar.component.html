@@ -1,0 +1,74 @@
+<aside class="db_sidebar card">
+	<div class="user_meta_db d-flex align-items-center">
+		<div class="img_upload">
+			<i class="fa fa-edit">
+
+			</i>
+			<input type="file" (change)="editFileInput($event)">
+		</div>
+		<!-- {{image_path}}{{userData.profile_image}} -->
+		<img src="assets/imgs/no-photo.jpg" class="img-fluid" *ngIf="!userData.profile_image && !fileToUpload">
+		<img src="{{image_path}}{{userData.profile_image}}" class="img-fluid" *ngIf="userData.profile_image && !fileToUpload">
+		<img [src]="fileToUpload" class="img-fluid" *ngIf="fileToUpload">
+		
+		<div class="usr_desc">
+			<h4>{{userData.first_name}} {{userData.last_name}}</h4>
+			<a class="cp" (click)="logout()">Logout</a>
+		</div>
+	</div>
+	<ul class="sidebar_nav" type="none">
+		<li class="sideli active_sd">
+			<a routerLink="/dbDashboard">Dashboard</a>
+		</li>
+		<li class="sideli">
+			<a routerLink="/dbProfile">My Profile</a>
+		</li>
+		<li class="sideli">
+			<a routerLink="/dbEnrolledExams">Enrolled Exams</a>
+		</li>
+		<li class="sideli">
+			<a routerLink="/dbScores">Scores</a>
+		</li>
+
+		<li class="sideli accordion-toggle collapsed" data-toggle="collapse" data-target="#collapseOn1" aria-expanded="false" aria-controls="collapseOn1">
+			<a routerLink="/dbMyClassroom accordion-toggle">My Classroom <span class="pls_ico abs_icn_fq"><i class="fa fa-angle-down"></i></span> <span class="mns_ico abs_icn_fq"><i class="fa fa-angle-up"></i></span></a>
+
+			<div id="collapseOn1" class="collapse" aria-labelledby="headingt2" data-parent="#accordion">
+				<li class="sideli" *ngFor="let purchased of purchasedExam">
+					<a routerLink="/lms/{{purchased.exam_id._id}}/{{purchased.exam_id.examName}}">{{purchased.exam_id.examName}}</a>
+				</li>
+				<!-- <li class="sideli">
+					<a routerLink="/dbScores">Option2</a>
+				</li>
+				<li class="sideli">
+					<a routerLink="/dbScores">Option3</a>
+				</li> -->
+			</div>
+
+		<!-- <li class="sideli accordion-head active" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+			<a routerLink="/dbMyClassroom accordion-toggle">My Classroom <span>
+                            </span></a>
+		</li>
+		<div id="collapseOne" class="collapse" aria-labelledby="headingOne">
+      		<li class="sideli">
+			<a routerLink="/dbScores">Option1</a>
+		</li>
+		<li class="sideli">
+			<a routerLink="/dbScores">Option2</a>
+		</li>
+		<li class="sideli">
+			<a routerLink="/dbScores">Option3</a>
+		</li>
+
+	</div> -->
+	<li class="sideli">
+		<a routerLink="/dbPurchaseBooks">Purchase Books</a>
+	</li>
+	<li class="sideli">
+		<a href="javascript:;">Help</a>
+	</li>
+	<li class="sideli">
+		<a href="javascript:;" (click)="logout()">Logout</a>
+	</li>
+</ul>
+</aside>

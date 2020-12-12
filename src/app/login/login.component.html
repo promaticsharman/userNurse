@@ -1,0 +1,78 @@
+<app-header></app-header>
+
+<div class="wrapper_shala">
+	
+	<section class="sign_up_wrap comm_sec">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="regsiter_usr">
+                        <div class="row">
+                            <div class="col-sm-6 offset-sm-3">
+            					<div class="cms_top_desc text-left">
+                                    <h2>Welcome Back!</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </p>
+                                </div>
+                                <div class="rigth_side">
+                                	<div class="section-title pos_rel text-center mt-0">
+                            		  <!-- <div class="intro-title">Welcome Back!</div> -->
+                            			<h2 >Login</h2>
+                            		</div>
+                                    <form [formGroup]="login">
+                                        <div class="form-group">
+                                            <input type="text" [(ngModel)]="login.email" formControlName="email" class="form-control" placeholder="Enter Email">
+                                            <div *ngIf="login.controls.email.invalid && (login.controls.email.dirty || login.controls.email.touched)"
+                                                class="">
+                                            
+                                                <mat-error *ngIf="login.controls.email.errors.required">
+                                                    Email is required
+                                                </mat-error>
+                                                <mat-error *ngIf="login.controls.email.errors.email">
+                                                    Email is not valid
+                                                </mat-error>
+
+                                            </div>
+                                        </div>
+                                         <div class="form-group">
+                                            <input type="password" [(ngModel)]="login.password" formControlName="password" class="form-control" placeholder="Enter Password">
+                                            <div *ngIf="login.controls.password.invalid && (login.controls.password.dirty || login.controls.password.touched)"
+                                                class="">
+                                            
+                                                <mat-error *ngIf="login.controls.password.errors.required">
+                                                    Password is required
+                                                </mat-error>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group d-flex justify-content-between">
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                                <label class="custom-control-label" for="customCheck">Remember Me</label>
+                                            </div>
+                                            <a class="acc_log" routerLink="/forgotPassword">Forgot Password?</a>
+                                        </div>
+                                        <div class="sub_btn text-center my-2">
+                                            <button class="btn btn_theme" [disabled]="!login.valid" (click)="submit()" type="button"> <i class="fa fa-spinner fa-spin" *ngIf="loading"></i> Login</button>
+                                        </div>          
+                                    </form>
+                                    <div class="sign_link text-center">
+                                        <p class="mt-2">Don't have an account? <a routerLink="/signup" class="sign_lik">Create Account</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- footer starts -->
+	<app-footer></app-footer>
+	<!-- footer ends -->
+</div>

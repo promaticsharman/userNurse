@@ -1,0 +1,865 @@
+<app-header></app-header>
+
+<div class="wrapper_shala">
+	<section class="her_sldr_don">
+	    <div class="hero_carosel">
+		    <owl-carousel-o [options]="heroOpt">
+			    <ng-template carouselSlide>
+		            <div class="hero-img">
+		               <img src="assets/imgs/bnr2.jpg" alt="">  
+		            </div>
+		            <div class="desc_sldr text-center">
+		               <span class="tag">Nursing Master</span>
+		               <h2>Get your Nursing Exam on the Go</h2>
+		               <p class="carsl_cnt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		               tempor incididunt ut labore et dolore magna aliqua.</p>
+		               <p class="carsl_btn"><a href="#" class="btn btn_theme">Practice Exams</a></p>
+		            </div>
+			    </ng-template>  
+			    <ng-template carouselSlide>
+		            <div class="hero-img">
+		               <img src="assets/imgs/bnr1.jpg" alt="">  
+		            </div>
+		            <div class="desc_sldr text-center">
+		               <span class="tag">Nursing Master</span>
+		               <h2>Get your Nursing Exam on the Go</h2>
+		               <p class="carsl_cnt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		               tempor incididunt ut labore et dolore magna aliqua.</p>
+		               <p class="carsl_btn"><a href="#" class="btn btn_theme">Practice Exams</a></p>
+		            </div>
+			    </ng-template>  
+			    <ng-template carouselSlide>
+		            <div class="hero-img">
+		               <img src="assets/imgs/bnr3.jpg" alt="">  
+		            </div>
+		            <div class="desc_sldr text-center">
+		               <span class="tag">Nursing Master</span>
+		               <h2>Get your Nursing Exam on the Go</h2>
+		               <p class="carsl_cnt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		               tempor incididunt ut labore et dolore magna aliqua.</p>
+		               <p class="carsl_btn"><a href="#" class="btn btn_theme">Practice Exams</a></p>
+		            </div>
+			    </ng-template>  
+			</owl-carousel-o>
+	    	<!-- <div class="slider-counter">1/3</div> -->
+	    </div>
+	</section>
+
+	<section class="qult_sec">
+		<div class="container">
+			<div class="col-sm-8 offset-sm-2">
+				<div class="section-title pos_rel text-center">
+                    <!-- <div class="intro-title">Quality is Our Passion</div> -->
+                    <h2>Quality is Our Passion</h2>                      
+                </div>
+                <p class="qult_p_pasn">
+                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+			</div>
+		</div>
+	</section>
+
+	<section class="fltr_sec">
+		<div class="container">
+			<div class="col-sm-8 offset-sm-2">
+                <div class="next_seelct text-center">
+                	<h1>Ready to Jump In</h1>
+                	<p>Select your Exam & Get Started</p>
+                	<form class="form-inline justify-content-center">
+	                	<select class="custom-select form-control sel_exm">
+	                		<option *ngFor="let exam of examName">{{exam.examName}}</option>
+	                	</select>
+	                	<button class="btn btn_theme">Get Started</button>
+	                </form>
+                </div>
+			</div>
+		</div>
+	</section>
+
+	<section class="aabott_sec bg_gray">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-sm-6 pl-0">
+	                <div class="left_abt_mig">
+	                    <div class="video-bx">
+							<img src="https://api.ellequebec.com/app/uploads/2019/07/10-raisons-refuser-mere-facebook-GettyImages-768x512.jpg" class="img-fluid" alt="Signature">
+							<div class="video-play-icon">
+								<a href="" class="popup-youtube video"><i class="fa fa-play"></i></a>
+							</div>
+						</div>
+	                </div>
+	            </div>
+	            <div class="col-sm-6">
+	                <div class="wrap_abt_right">
+	                    <div class="section-title pos_rel text-left">
+	                        <!-- <div class="intro-title">Key Features</div> -->
+	                        <h2>Key Features</h2>                      
+	                    </div>
+	                    <ul class="ul_key_feat">
+	                        <li class="d-flex justify-content-left align-items-start">
+	                        	<div class="ico_div">
+	                        		<i class="fa fa-user"></i>
+	                        	</div>
+	                        	<div class="ico_key_def">
+	                        		<h2 class="h3-key">Lorem Ipsum Sit Title</h2>
+	                        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        		tempor incididunt ut labore et dolore magna aliqua consequat.</p>
+	                        		<a href="">Learn More <i class="fa fa-long-arrow-right"></i></a>
+	                        	</div>
+	                        </li>
+	                        <li class="d-flex justify-content-left align-items-start">
+	                        	<div class="ico_div">
+	                        		<i class="fa fa-key"></i>
+	                        	</div>
+	                        	<div class="ico_key_def">
+	                        		<h2 class="h3-key">Lorem Ipsum Sit Title</h2>
+	                        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        		tempor incididunt ut labore et dolore magna aliqua consequat.</p>
+	                        		<a href="">Learn More <i class="fa fa-long-arrow-right"></i></a>
+	                        	</div>
+	                        </li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+	<section class="buy_exam">
+		<div class="custom_container">
+			<div class="section-title pos_rel text-left">
+                <!-- <div class="intro-title">Buy Exam</div> -->
+                <h2>Buy Exam</h2>                      
+            </div>
+            <div class="slider_sldr">
+            	<owl-carousel-o [options]="customOptions">
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://m.media-amazon.com/images/I/51vXHfMKkdL._SX260_.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+				    </ng-template>  
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://images-na.ssl-images-amazon.com/images/I/51fTmUs-WEL._SX389_BO1,204,203,200_.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</ng-template>  
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://images-na.ssl-images-amazon.com/images/I/91y2n+pWbRL.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+				    </ng-template>
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://prodimage.images-bn.com/pimages/9780323289313_p0_v1_s550x406.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</ng-template>  
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://images-na.ssl-images-amazon.com/images/I/51fTmUs-WEL._SX389_BO1,204,203,200_.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+				    </ng-template>
+				</owl-carousel-o>
+            </div>
+		</div>
+	</section>
+
+	<section class="work_sec_how bg_gray">
+        <div class="custom_container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="mision_left">
+                        <div class="sub_head">
+                            <!-- <h3 class="pos_rel">Preparation with Ease</h3> -->
+                            <h3>Preparation with Ease Study on the Go!</h3>
+                        </div>
+                        <div class="meta_dean d-flex">
+                            <div class="meta_info">
+                                <h5>“Practical learning for busy lives.” </h5>
+                                <small> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</small>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="para_mision">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                            <hr class="mb-2">
+                            <p class="quote_dean"><i>“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.”</i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="img_mision pos_rel">
+                        <img src="assets/imgs/mision.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why_uss">
+		<div class="container">
+			<div class="col-sm-8 offset-sm-2">
+				<div class="section-title pos_rel text-center">
+                    <!-- <div class="intro-title">Why Choose Us?</div> -->
+                    <h2>Why Choose Us?</h2>                      
+                </div>
+                <p class="qult_p_pasn">
+                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+			</div>
+		</div>
+	</section>
+
+	<section class="buy_exam">
+		<div class="custom_container">
+			<div class="section-title pos_rel text-left">
+                <!-- <div class="intro-title">Books (New Arrivals)</div> -->
+                <h2>Books (New Arrivals)</h2>                      
+            </div>
+            <div class="slider_sldr">
+            	<owl-carousel-o [options]="customOptions">
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://m.media-amazon.com/images/I/51vXHfMKkdL._SX260_.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+				    </ng-template>  
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://images-na.ssl-images-amazon.com/images/I/51fTmUs-WEL._SX389_BO1,204,203,200_.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</ng-template>  
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://images-na.ssl-images-amazon.com/images/I/91y2n+pWbRL.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+				    </ng-template>
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://prodimage.images-bn.com/pimages/9780323289313_p0_v1_s550x406.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</ng-template>  
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://images-na.ssl-images-amazon.com/images/I/51fTmUs-WEL._SX389_BO1,204,203,200_.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+				    </ng-template>
+				</owl-carousel-o>
+            </div>
+		</div>
+	</section>
+
+	<section class="buy_exam bg_gray">
+		<div class="custom_container">
+			<div class="section-title pos_rel text-left">
+                <!-- <div class="intro-title">Books (Best Sellers)</div> -->
+                <h2>Books (Best Sellers)</h2>                      
+            </div>
+            <div class="slider_sldr">
+            	<owl-carousel-o [options]="customOptions">
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://m.media-amazon.com/images/I/51vXHfMKkdL._SX260_.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+				    </ng-template>  
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://images-na.ssl-images-amazon.com/images/I/51fTmUs-WEL._SX389_BO1,204,203,200_.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</ng-template>  
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://images-na.ssl-images-amazon.com/images/I/91y2n+pWbRL.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+				    </ng-template>
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://prodimage.images-bn.com/pimages/9780323289313_p0_v1_s550x406.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</ng-template>  
+				    <ng-template carouselSlide>
+				    	<div class="product-wraper">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="https://images-na.ssl-images-amazon.com/images/I/51fTmUs-WEL._SX389_BO1,204,203,200_.jpg" alt="" class="img-fluid">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="javascript:;" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="javascript:;">Exam Name Title</a>
+									</h4>
+									<div class="ratdd-rev">
+										<span class="str_rev">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="far fa-star"></i>
+											<i class="far fa-star"></i>
+										</span>
+										<span class="rev_nmb">(19)</span>
+									</div>
+									<div class="info-product-price d-flex justify-content-between">
+										<span class="item_price">$98.00</span>
+										<del>$120.00</del>
+									</div>
+
+								</div>
+							</div>
+						</div>
+				    </ng-template>
+				</owl-carousel-o>
+            </div>
+		</div>
+	</section>
+
+	<section class="buy_exam">
+		<div class="custom_container">
+			<div class="section-title pos_rel text-left">
+                <!-- <div class="intro-title">Testimonial</div> -->
+                <h2>What our students say</h2>                      
+            </div>
+            <div class="slider_sldr">
+            	<owl-carousel-o [options]="testOptions">
+				    <ng-template carouselSlide>
+				    	<div class="test_warap_sing pos_rel">
+				    		<span class="abs_quote"><i class="fa fa-quote-left"></i></span>
+				    		<p class="test_def">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				    		consequat.</p>
+				    		<div class="meta_testi d-flex align-items-center">
+				    			<span class="tesi_img">
+				    				<img src="https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-3/img/user-13.005c80e1.jpg" class="img-fluid">
+				    			</span>
+				    			<span class="tesi_info">
+				    				<h3>Jane Doe</h3>
+				    				<p>Accountant, IVY</p>
+				    			</span>
+				    		</div>
+				    	</div>
+				    </ng-template>
+				    <ng-template carouselSlide>
+				    	<div class="test_warap_sing pos_rel">
+				    		<span class="abs_quote"><i class="fa fa-quote-left"></i></span>
+				    		<p class="test_def">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				    		consequat.</p>
+				    		<div class="meta_testi d-flex align-items-center">
+				    			<span class="tesi_img">
+				    				<img src="https://preview.keenthemes.com/metronic-v4/theme/assets/pages/media/profile/profile_user.jpg" class="img-fluid">
+				    			</span>
+				    			<span class="tesi_info">
+				    				<h3>James Morris</h3>
+				    				<p>Accountant, IVY</p>
+				    			</span>
+				    		</div>
+				    	</div>
+				    </ng-template>
+				    <ng-template carouselSlide>
+				    	<div class="test_warap_sing pos_rel">
+				    		<span class="abs_quote"><i class="fa fa-quote-left"></i></span>
+				    		<p class="test_def">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				    		consequat.</p>
+				    		<div class="meta_testi d-flex align-items-center">
+				    			<span class="tesi_img">
+				    				<img src="https://www.pezalli.com/media/front/img/user-images/914787684.jpg" class="img-fluid">
+				    			</span>
+				    			<span class="tesi_info">
+				    				<h3>Maria Lawrence</h3>
+				    				<p>Accountant, IVY</p>
+				    			</span>
+				    		</div>
+				    	</div>
+				    </ng-template>
+				    <ng-template carouselSlide>
+				    	<div class="test_warap_sing pos_rel">
+				    		<span class="abs_quote"><i class="fa fa-quote-left"></i></span>
+				    		<p class="test_def">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				    		consequat.</p>
+				    		<div class="meta_testi d-flex align-items-center">
+				    			<span class="tesi_img">
+				    				<img src="https://preview.keenthemes.com/metronic-v4/theme/assets/pages/media/profile/profile_user.jpg" class="img-fluid">
+				    			</span>
+				    			<span class="tesi_info">
+				    				<h3>James Morris</h3>
+				    				<p>Accountant, IVY</p>
+				    			</span>
+				    		</div>
+				    	</div>
+				    </ng-template>
+				    <ng-template carouselSlide>
+				    	<div class="test_warap_sing pos_rel">
+				    		<span class="abs_quote"><i class="fa fa-quote-left"></i></span>
+				    		<p class="test_def">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				    		consequat.</p>
+				    		<div class="meta_testi d-flex align-items-center">
+				    			<span class="tesi_img">
+				    				<img src="https://preview.keenthemes.com/metronic-v4/theme/assets/pages/media/profile/profile_user.jpg" class="img-fluid">
+				    			</span>
+				    			<span class="tesi_info">
+				    				<h3>James Morris</h3>
+				    				<p>Accountant, IVY</p>
+				    			</span>
+				    		</div>
+				    	</div>
+				    </ng-template>
+				</owl-carousel-o>
+            </div>
+		</div>
+	</section>
+	<!-- footer starts -->
+	<app-footer></app-footer>
+	<!-- footer ends -->
+</div>

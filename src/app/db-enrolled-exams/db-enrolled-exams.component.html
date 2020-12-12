@@ -1,0 +1,148 @@
+<app-db-header></app-db-header>
+
+<div class="wrapper_shala dashbrd_main">
+
+	<section class="wraper_dashbaord ">
+		<div class="custom_container">
+			<div class="row">
+				
+				<div class="col-sm-3">
+					<app-db-sidebar></app-db-sidebar>
+				</div>
+				
+				<div class="col-sm-9">
+					<div class="dshbrd_wraper_main">
+						<div class="card_contnt enrolled_exams_page"> <!-- chnage page class -->
+							<div class="pag_ttl">
+								<h2 class="pos_rel">Enrolled Exams</h2>
+							</div>
+							<!-- main work area -->
+							<div class="db_cntn_wraper">
+								<div class="enorld_exms_wraped card">
+									<div class="single_cors bg_org wow fadeIn" data-wow-delay=".3s" *ngFor="let item of data">
+			                        	<h3 class="bg_color_hed">{{item.exam_id.examName}}</h3>
+			                        	<div class="row">
+			                        		<div class="col-sm-7">
+			                        			<div class="cors_body">
+			                        				<h3>What is Included?</h3>
+					                                <ul class="cors_list" type="none">
+					                                	<li *ngFor="let ele of item.exam_id.description"><i class="fa fa-check"></i>{{ele}}</li>
+					                                    <!-- <li><i class="fa fa-check"></i>200+Practice Questions</li>
+					                                    <li><i class="fa fa-check"></i>Content Matches NCLEX-RN</li>
+					                                    <li><i class="fa fa-check"></i>Exam Style Questions</li> -->
+					                                </ul>
+					                            </div>
+			                        		</div>
+			                        		<div class="col-sm-5">
+					                            <div class="cors_head">
+					                                <h2 class="cors_title">${{item.exam_id.price}}</h2>
+					                                <p>Purchased Date: {{item.start_date | date:'dd/ MMM/ yyyy'}}</p>
+					                                <p>Expiry Date: {{item.end_date | date:'dd/ MMM/ yyyy'}}</p>
+					                            </div>
+						                        <div class="cors_footer">
+						                            <!-- <a class="link_a" href="javascript:;">Expired</a> -->
+					                                <a href="javascript:;" class="btn btn_theme" data-animation="fadeInLeft" data-delay="900ms">Renew <i class="fa fa-long-arrow-alt-right"></i></a>
+					                            </div>
+			                        		</div>
+			                        	</div>
+
+									</div>
+									
+									<div class="trans_img text-center">
+										<img src="assets/imgs/rem-bg.png" alt="remove-img" class="img-fluid">
+										<h4>No records found.</h4>
+									</div>
+			                        <!-- <div class="single_cors bg_org wow fadeIn" data-wow-delay=".3s">
+			                        	<h3 class="bg_color_hed">NC-LEX Exam Name</h3>
+			                        	<div class="row">
+			                        		<div class="col-sm-7">
+			                        			<div class="cors_body">
+			                        				<h3>What is Included?</h3>
+					                                <ul class="cors_list" type="none">
+					                                	<li><i class="fa fa-check"></i>Valid for 180 days</li>
+					                                    <li><i class="fa fa-check"></i>200+Practice Questions</li>
+					                                    <li><i class="fa fa-check"></i>Content Matches NCLEX-RN</li>
+					                                    <li><i class="fa fa-check"></i>Exam Style Questions</li>
+					                                </ul>
+					                            </div>
+			                        		</div>
+			                        		<div class="col-sm-5">
+					                            <div class="cors_head">
+					                                <h2 class="cors_title">$750</h2>
+					                                <p>Purchased Date: 12/06/2020</p>
+					                                <p>Expiry Date: 12/12/2020</p>
+					                            </div>
+						                        <div class="cors_footer">
+					                                <a href="javascript:;" class="btn btn_theme" data-animation="fadeInLeft" data-delay="900ms">Renew <i class="fa fa-long-arrow-alt-right"></i></a>
+					                            </div>
+			                        		</div>
+			                        	</div>
+
+			                        </div>
+			                        <div class="single_cors bg_org wow fadeIn" data-wow-delay=".3s">
+			                        	<h3 class="bg_color_hed">NC-LEX Exam Name</h3>
+			                        	<div class="row">
+			                        		<div class="col-sm-7">
+			                        			<div class="cors_body">
+			                        				<h3>What is Included?</h3>
+					                                <ul class="cors_list" type="none">
+					                                	<li><i class="fa fa-check"></i>Valid for 180 days</li>
+					                                    <li><i class="fa fa-check"></i>200+Practice Questions</li>
+					                                    <li><i class="fa fa-check"></i>Content Matches NCLEX-RN</li>
+					                                    <li><i class="fa fa-check"></i>Exam Style Questions</li>
+					                                </ul>
+					                            </div>
+			                        		</div>
+			                        		<div class="col-sm-5">
+					                            <div class="cors_head">
+					                                <h2 class="cors_title">$750</h2>
+					                                <p>Purchased Date: 12/06/2020</p>
+					                                <p>Expiry Date: 12/12/2020</p>
+					                            </div>
+						                        <div class="cors_footer">
+					                                <a href="javascript:;" class="btn btn_theme" data-animation="fadeInLeft" data-delay="900ms">Renew <i class="fa fa-long-arrow-alt-right"></i></a>
+					                            </div>
+			                        		</div>
+			                        	</div>
+
+			                        </div>
+			                        <div class="single_cors bg_org wow fadeIn" data-wow-delay=".3s">
+			                        	<h3 class="bg_color_hed">NC-LEX Exam Name</h3>
+			                        	<div class="row">
+			                        		<div class="col-sm-7">
+			                        			<div class="cors_body">
+			                        				<h3>What is Included?</h3>
+					                                <ul class="cors_list" type="none">
+					                                	<li><i class="fa fa-check"></i>Valid for 180 days</li>
+					                                    <li><i class="fa fa-check"></i>200+Practice Questions</li>
+					                                    <li><i class="fa fa-check"></i>Content Matches NCLEX-RN</li>
+					                                    <li><i class="fa fa-check"></i>Exam Style Questions</li>
+					                                </ul>
+					                            </div>
+			                        		</div>
+			                        		<div class="col-sm-5">
+					                            <div class="cors_head">
+					                                <h2 class="cors_title">$750</h2>
+					                                <p>Purchased Date: 12/06/2020</p>
+					                                <p>Expiry Date: 12/12/2020</p>
+					                            </div>
+						                        <div class="cors_footer">
+					                                <a href="javascript:;" class="btn btn_theme" data-animation="fadeInLeft" data-delay="900ms">Renew <i class="fa fa-long-arrow-alt-right"></i></a>
+					                            </div>
+			                        		</div>
+			                        	</div>
+
+			                        </div> -->
+								</div>
+							</div>
+							<!-- main work area -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- footer starts -->
+	<app-footer></app-footer>
+	<!-- footer ends -->
+</div>

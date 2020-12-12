@@ -1,0 +1,365 @@
+
+                                            <section class="drag-drop-wrapper">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div cdkDropListGroup>
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="example-container">
+                                                                        <h2>Potential Steps</h2>
+                                                                        <div cdkDropList [cdkDropListData]="items"
+                                                                            class="example-list"
+                                                                            cdkDropListSortingDisabled
+                                                                            (cdkDropListDropped)="drop($event)">
+                                                                            <div class="example-box"
+                                                                                *ngFor="let item of items" cdkDrag>
+                                                                                {{item}}</div>
+                                                                            <!-- call this div for first col -->
+                                                                            <div class="example-box-odd"></div>
+                                                                            <!-- call this div for second col -->
+                                                                            <div class="example-box-even"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="example-container">
+                                                                        <h2>Appropriate Steps</h2>
+                                                                        <div cdkDropList [cdkDropListData]="basket"
+                                                                            class="example-list"
+                                                                            (cdkDropListDropped)="drop($event)">
+                                                                            <div class="example-box"
+                                                                                *ngFor="let item of basket" cdkDrag>
+                                                                                {{item}}</div>
+                                                                            <!-- call this div for first col -->
+                                                                            <div class="example-box-odd"></div>
+                                                                            <!-- call this div for second col -->
+                                                                            <div class="example-box-even"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="cloze-wrpr">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="cloze-drp-dwn-wrpr">
+                                                            <div class="drp-dwn-cntnt">
+                                                                <p>
+                                                                    lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                    elit, sed do
+                                                                    <mat-form-field>
+                                                                        <select matNativeControl required>
+                                                                            <option value="volvo">option1</option>
+                                                                            <option value="saab">option2</option>
+                                                                            <option value="mercedes">option3</option>
+                                                                            <option value="audi">option4</option>
+                                                                        </select>
+                                                                    </mat-form-field>
+                                                                    lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                    elit, sed do
+                                                                    <mat-form-field>
+                                                                        <select matNativeControl required>
+                                                                            <option value="volvo">option1</option>
+                                                                            <option value="saab">option2</option>
+                                                                            <option value="mercedes">option3</option>
+                                                                            <option value="audi">option4</option>
+                                                                        </select>
+                                                                    </mat-form-field>
+                                                                    lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                    elit, sed do
+                                                                    <mat-form-field>
+                                                                        <select matNativeControl required>
+                                                                            <option value="volvo">option1</option>
+                                                                            <option value="saab">option2</option>
+                                                                            <option value="mercedes">option3</option>
+                                                                            <option value="audi">option4</option>
+                                                                        </select>
+                                                                    </mat-form-field>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="matrix-grid">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <table class="table table-assmnt table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">Assessment Finding</th>
+                                                                    <th scope="col" class="form-radio-text">Effective
+                                                                    </th>
+                                                                    <th scope="col" class="form-radio-text">Ineffective
+                                                                    </th>
+                                                                    <th scope="col" class="form-radio-text">Unrelated
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>FHR of 145</td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option1" checked>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option2">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option3">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>FHR of 145</td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option4">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option5">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option6">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>FHR of 145</td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option7">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option8">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option9">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>FHR of 145</td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option10">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option11">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option12">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>FHR of 145</td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option13">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option14">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="form-radio-text">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio"
+                                                                                name="exampleRadios" id="exampleRadios1"
+                                                                                value="option15">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="question-calc-wrpr">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="drag-calc">
+                                                            <!-- calc plugin -->
+                                                            <div class="question-answers-wrpr">
+                                                                <div class="main-question-box">
+                                                                    <p class="question-text">Question</p>
+                                                                    <p class="question-content ml-3">Lorem ipsum dolor
+                                                                        sit amet, consectetur adipisicing elit.</p>
+                                                                </div>
+                                                                <p class="answer-text">Answers</p>
+                                                                <div class="answer-choices ml-3">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            value="" id="defaultCheck1">
+                                                                        <label class="form-check-label"
+                                                                            for="defaultCheck1">
+                                                                            Lorem ipsum dolor sit amet, consectetur
+                                                                            adipisicing elit, sed do eiusmod.
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            value="" id="defaultCheck1">
+                                                                        <label class="form-check-label"
+                                                                            for="defaultCheck1">
+                                                                            Lorem ipsum dolor sit amet, consectetur
+                                                                            adipisicing elit, sed do eiusmod.
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            value="" id="defaultCheck1">
+                                                                        <label class="form-check-label"
+                                                                            for="defaultCheck1">
+                                                                            Lorem ipsum dolor sit amet, consectetur
+                                                                            adipisicing elit, sed do eiusmod.
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            value="" id="defaultCheck1">
+                                                                        <label class="form-check-label"
+                                                                            for="defaultCheck1">
+                                                                            Lorem ipsum dolor sit amet, consectetur
+                                                                            adipisicing elit, sed do eiusmod.
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="incorrect-popup">
+                                                                <div class="error-notice">
+                                                                    <div class="oaerror danger">
+                                                                        <strong>Incorrect Answer</strong>
+                                                                        <p>-Lorem ipsum dolor sit amet, consectetur
+                                                                            adipisicing elit, sed do eiusmod
+                                                                            tempor incididunt ut labore et dolore magna
+                                                                            aliqua. Ut enim ad minim veniam</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="next-btn">
+                                                                <button class="btn btn-video">Next</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="medication-record-wrpr">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="medication-record-heading">
+                                                            <h3>Medication Record</h3>
+                                                        </div>
+                                                        <div class="medication-record-table">
+                                                            <table class="table table-medication table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">Date</th>
+                                                                        <th scope="col" class="form-radio-text">Drug and
+                                                                            Strength</th>
+                                                                        <th scope="col" class="form-radio-text">Sig</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>15/8/2020</td>
+                                                                        <td class="form-radio-text">
+                                                                            Albeutrol Inhaler
+                                                                        </td>
+                                                                        <td class="form-radio-text">
+                                                                            UAD
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>15/8/2020</td>
+                                                                        <td class="form-radio-text">
+                                                                            Albeutrol Inhaler
+                                                                        </td>
+                                                                        <td class="form-radio-text">
+                                                                            UAD
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>15/8/2020</td>
+                                                                        <td class="form-radio-text">
+                                                                            Albeutrol Inhaler
+                                                                        </td>
+                                                                        <td class="form-radio-text">
+                                                                            UAD
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>15/8/2020</td>
+                                                                        <td class="form-radio-text">
+                                                                            Albeutrol Inhaler
+                                                                        </td>
+                                                                        <td class="form-radio-text">
+                                                                            UAD
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>15/8/2020</td>
+                                                                        <td class="form-radio-text">
+                                                                            Albeutrol Inhaler
+                                                                        </td>
+                                                                        <td class="form-radio-text">
+                                                                            UAD
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </section>

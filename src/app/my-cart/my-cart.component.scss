@@ -1,0 +1,16 @@
+.table_desc	{
+	table tr:first-child td:last-child {
+	  border-top-right-radius: 0px;
+	}
+	table tr:first-child th:first-child {
+	  border-bottom-left-radius: 0px;
+	}
+}
+.table_payy {
+	table tr:last-child th:first-child {
+	  border-bottom-left-radius: 6px;
+	}
+	table tr:first-child td:last-child {
+	  border-top-right-radius: 6px;
+	}
+}

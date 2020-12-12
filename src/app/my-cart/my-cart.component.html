@@ -1,0 +1,108 @@
+<app-header></app-header>
+
+<div class="wrapper_shala">
+	<section class="my_cart_sec">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="cart_side_bene">
+						<h3 class="top_bene" *ngIf="cart_content">
+							{{cart_content.feature_heading}}
+						</h3>
+						<div class="cors_body wrp_lst_cart">
+							<!-- <h4>Whats Included</h4> -->
+							<ul class="cors_list" type="none" *ngIf="cart_content && cart_content.feature.length > 0">
+								<li *ngFor="let item of cart_content.feature"><i class="fa fa-check"></i> {{item}}</li>
+								<!-- <li><i class="fa fa-check"></i> 5+ NCLEX Simulator Exam</li>
+								<li><i class="fa fa-check"></i> Comprehensive Review</li>
+								<li><i class="fa fa-check"></i> NCLEX Review eBook</li>
+								<li><i class="fa fa-check"></i> NCLEX Study Plans</li>
+								<li><i class="fa fa-check"></i> Mobile Apps</li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="wrap_top_rgt_crt">
+						<div class="wrap_abt_right">
+							<div class="sub_head">
+								<p class="pos_rel text-uppercase">Guaranteed Success</p>
+								<!-- <h3 class="text-capitalize">We've got you covered</h3> -->
+							</div>
+							<div  *ngIf="cart_content" [innerHTML]="cart_content.content"></div>
+							<!-- <div class="para_doc_abt">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+									irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+									pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+									deserunt mollit anim id est laborum.</p>
+							</div>
+							<div class="sub_head mt-4">
+								<h3 class="text-capitalize">We've got you covered</h3>
+							</div>
+							<div class="para_doc_abt">
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+									fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+									qui officia deserunt mollit anim id est laborum.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad
+									minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+									commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="table_desc">
+				<div class="table-responsive table_comonn">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="2">Description</th>
+								<th>Amount</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let item of cart_items">
+								<td>{{item.exam_id.examName}}</td>
+								<td><a class="link_a m-0" (click)="removeCart(item.exam_id._id)">Remove</a></td>
+								<td>${{item.exam_id.price}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="table_payy">
+				<div class="table-responsive table_comonn">
+					<table class="table table-bordered">
+						<tbody>
+							<tr>
+								<th>Subtotal</th>
+								<td>${{ total }}</td>
+							</tr>
+							<tr>
+								<th>Tax</th>
+								<td>$0.00</td>
+							</tr>
+							<tr>
+								<th>Total </th>
+								<td>${{total}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="text_btn text-right">
+				<button class="btn btn_theme" (click)="checkout()">Checkout</button>
+			</div>
+		</div>
+	</section>
+	<!-- footer starts -->
+	<app-footer></app-footer>
+	<!-- footer ends -->
+</div>
