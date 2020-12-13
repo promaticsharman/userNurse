@@ -794,4 +794,16 @@ export class WebServiceService {
         catchError(this.error)
       )
   }
+
+   saveAnswer(data): Observable<any> {
+    let API_URL = `${this.apiUrl}/save/user/score`
+    console.log('inside-->', API_URL, data);
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
 }

@@ -23,6 +23,7 @@ declare var $;
 
 
 export class LmsIntroductionComponent implements OnInit {
+  userData=<any>{}
   topicName: []
   topicCount
   chName: []
@@ -56,9 +57,10 @@ export class LmsIntroductionComponent implements OnInit {
     this.exmName = this.route.snapshot.params.exmName
     console.log("Path: ", this.route);
     this.exam_id = this.route.snapshot.params.exam_id
-    this.urlChapter_id = this.route.snapshot.params.chapter_id
+    this.urlChapter_id = this.route.snapshot.params.chapter_id    
     this.urlTopic_id = this.route.snapshot.params.topic_id
     this.type = this.route.snapshot.params.type
+    this.userData = JSON.parse(localStorage['userData'])
     // this.getAllChapter()
     this.getChapterAndTopicsByExam()
 
@@ -248,12 +250,12 @@ export class LmsIntroductionComponent implements OnInit {
           flag=true;
       }});
 
-      console.log(flag);
-      console.log(item.answer[0].correctOptions);
-      console.log( item.selectedAnswer);
+      console.log('1', flag);
+      console.log('2', item.answer[0].correctOptions);
+      console.log('3', item.selectedAnswer);
    
       item.wrongAnswer = flag;
-      
+ 
     }
 
     if(item.answer_type=='Multiple') {
@@ -280,7 +282,7 @@ export class LmsIntroductionComponent implements OnInit {
         if(item.answer[0].correctOptions[element.index]!=element.value){
           item.wrongAnswer = true;
       }});
-console.log('asdasd');
+      console.log('asdasd');
       console.log(item.wrongAnswer);
       console.log(item.answer[0].correctOptions);
       console.log( item.selectedAnswer);
@@ -328,21 +330,22 @@ console.log('asdasd');
   }
 
   storeAnswer(item,index,ques) {
-  /*   console.log("===check",item,index,ques)
+    /*console.log("===check",item,index,ques)
     ques.answer[0].store_ans[index] = item
     ques.checkAnswer = false;
     console.log(ques); */
+
+    console.log('ques is ', ques);
     if(typeof ques.selectedAnswer === "undefined"){
       ques.selectedAnswer=[];
     }
-   
    var objIndex = ques.selectedAnswer.findIndex((obj => obj.index == index));
     if(objIndex!=-1){
       ques.selectedAnswer[index]={index:index, value:item};
     }else{
-    ques.selectedAnswer.push({index:index, value:item});
+      ques.selectedAnswer.push({index:index, value:item});
     }
-    console.log(ques);
+    // console.log(ques);
   }
   // getAllChapter(){
   //   this.service.getAllChapter().subscribe(data => {
@@ -443,5 +446,28 @@ console.log('asdasd');
         console.log("Answers Array : ", this.answerArray)
       }
     })
+  }
+  saveAnswer(questionItem){
+    console.log('quesssssssssss', questionItem, this.userData._id);
+    let element: HTMLElement = document.getElementsByClassName('carousel-control-next')[0] as HTMLElement;
+    console.log(element,"eleememeenf");
+    // let answers = [];
+    let answer = {
+                  exam_id: this.exam_id,
+                  question_id: questionItem.id,
+                  question_correct: true,
+                  topic_id: questionItem.topic_id,
+                  user_id: this.userData._id,
+                }
+    console.log('anseeee', answer);            
+    this.service.saveAnswer(answer).subscribe(response => {
+      console.log("response Data: ", response)
+      element.click();
+      // if (data.data.answer_type == "Multiple") {
+      //   this.answerArray = data.data.answer
+      //   console.log("Answers Array : ", this.answerArray)
+      // }
+    })          
+    // answers.push(answer);
   }
 }
