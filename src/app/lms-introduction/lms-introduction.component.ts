@@ -452,10 +452,15 @@ export class LmsIntroductionComponent implements OnInit {
     let element: HTMLElement = document.getElementsByClassName('carousel-control-next')[0] as HTMLElement;
     console.log(element,"eleememeenf");
     // let answers = [];
+    var flag=false;
+    questionItem.selectedAnswer.forEach(element => {
+      if(questionItem.answer[0].correctOptions[element.index]!=element.value){
+        flag=true;
+    }});
     let answer = {
                   exam_id: this.exam_id,
                   question_id: questionItem.id,
-                  question_correct: true,
+                  question_correct: flag,
                   topic_id: questionItem.topic_id,
                   user_id: this.userData._id,
                 }
